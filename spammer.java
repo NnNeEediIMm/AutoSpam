@@ -18,6 +18,8 @@ public class spammer{
         String text = scanner.nextLine();
         System.out.println("How many times:");
         int delay = scanner.nextInt();
+        System.out.println("Delay between messages(miliseconds):");
+        int times = scanner.nextInt();
 
         StringSelection stringg = new StringSelection(text);
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
@@ -27,7 +29,7 @@ public class spammer{
         Thread.sleep(10000);
 
         while (x <= delay) {
-            Thread.sleep(1000);
+            Thread.sleep(times);
 
             robo.keyPress(KeyEvent.VK_CONTROL);
             robo.keyPress(KeyEvent.VK_V);
